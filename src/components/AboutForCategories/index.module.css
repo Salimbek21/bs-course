@@ -1,0 +1,15 @@
+.aboutFor_img {
+  max-width: 1440px;
+  position: relative;
+}
+
+.aboutFor_forst_box {
+  width: 300px;
+  position: absolute;
+}
+
+.aboutFor_secand_box {
+  position: absolute;
+  top: 82px;
+  width: 300px;
+}
