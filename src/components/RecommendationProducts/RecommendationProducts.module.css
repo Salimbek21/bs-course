@@ -1,0 +1,40 @@
+.sectionRecomend {
+  background: #F9F9F9;
+}
+
+.ReccomendationProductsWrapper {
+  width: 100%;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) ;
+}
+
+.ReccomendationProducts {
+  width: 72%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) ;
+  grid-template-rows: repeat(2, auto);
+  gap: 10px; /* Adjust the gap as needed */
+  /* background-color: aliceblue; */
+}
+
+.ReccomendationProductsItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.ReccomendationProductsImage {
+  width: 100%;
+  /* height: 270px; */
+  padding-top: 47px;
+  padding-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  margin: auto;
+}
+.ReccomendationProductsImage>img {
+  width: 100%;
+}
+
