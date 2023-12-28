@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import HeroComponent from '@/components/Hero'
 import Brands from '@/components/Brands'
 import RecommendationProducts from '@/components/RecommendationProducts'
+import CheapProduct from '@/components/CheapProducts'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,6 +14,7 @@ export default function Home() {
     <>
    
      {/* <HeroComponent/> */}
+     <CheapProduct/>
       <Brands/>
       <RecommendationProducts/>
 
