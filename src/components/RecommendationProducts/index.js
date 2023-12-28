@@ -2,7 +2,7 @@ import axios from "axios";
 import cls from "../Brands/brands.module.css";
 import stl from "./RecommendationProducts.module.css";
 import { useEffect, useState } from "react";
-import { ReccomendationProductSectionLogo, LikeLogo,ChartLogo } from '../svg';
+import { ReccomendationProductSectionLogo, LikeLogo,ChartLogo,BucketLogo,ArrowLogo } from '../svg';
 import Link from 'next/link';
 
 //https://api.brandstore.uz/api/home 200 so'm
@@ -153,6 +153,7 @@ import Link from 'next/link';
 
 export default function RecommendationProducts(){
   const [data, setData]=useState([]);
+//   const [additionData, setAdditionData]=useState([]);
 
   useEffect(()=>{
       axios
@@ -162,14 +163,22 @@ export default function RecommendationProducts(){
           },
       })
       .then((r)=>{
-          console.log(r.data.data,"res");
+          console.log(r.data.data.product_request,"res");
           setData(r.data.data.product_request)
       })
+
+    //   axios
+    //   .get('https://brandstore.uz/_next/data/o43ZcItdFPrzoUswbpf0G/uz/productPage/keys-asus-rog-strix-helios-gx601-white-edition.json?product=keys-asus-rog-strix-helios-gx601-white-edition')
+    //   .then((response)=>{
+    //       console.log(response,"response");
+    //       setAdditionData(response)
+    //   })
+
   },[]);
 
   return(
       <>
-     <section className={`${cls.sectionBrands} ${stl.sectionRecomend}`}>
+     <section className={`${cls.sectionBrands} ${stl.sectionRecommend}`}>
       <div className="container">
           <div className={cls.brandAndReccomendNavPart}>
               <div className={cls.sectionName}>
@@ -183,18 +192,49 @@ export default function RecommendationProducts(){
               <button>Смотреть всё</button>
           </div>
 
-            <div className={stl.ReccomendationProductsWrapper}>
-                 <ul className={stl.ReccomendationProducts}>
-             
-                    <li className={stl.ReccomendationProductsItem} >
+            <div className={stl.recommendationProductsWrapper}>
+                 <ul className={stl.recommendationProducts}>
+                 {data.length && data.slice(0,6).map((item)=>(
+
+                    <li key={item.id} className={stl.recommendationProductsItem} >
                         <Link href="#">
                             <div className={stl.likeLogo}><LikeLogo/> <ChartLogo/> </div>
-                            <div className={stl.ReccomendationProductsImage}><img src="https://picsum.photos/240" alt="" /></div>
+                            <div className={stl.recommendationProductsImage}><img src={item.images[0].url} alt={item.name} /></div>
+                            <div className={stl.recommendProductInfo}>
+                                <div className={stl.recommendProductTitle}>
+                                    <p>{item.class.name}</p>
+                                    <p>{item.name}</p>
+                                </div>
+                                <div className={stl.recommendProductQuantity}><p>mavjud:</p> <p>{item.random_shop.quantity} dona.</p></div>
+                                <div className={stl.recommendProductPrice}>
+                                    <div>
+                                        <p>{item.random_shop.monthly_price} сум / мес.</p>
+                                        <p>{item.random_shop.price} сум</p>
+                                    </div>
+                                    <button><span><BucketLogo/></span>  в Корзину</button>
+                                </div>
+                            </div>
                         </Link>
                     </li>
- 
-           
-          </ul>
+                ))}
+                 </ul>
+                <div className={stl.recommendProductsSectionAds}>
+                    <div><Link href='#'>
+                    <div className={stl.recommendProductsSectionAdsInfo}>
+                    <p>VIVO <span>X550</span> </p><span><ArrowLogo/></span> 
+                    <p>А также стремящиеся вытеснить традиционное производство, технология в целые кластеры себе подобных.</p>
+                    </div>
+                    </Link></div>
+
+                    <div><Link href='#'>
+                    <div className={stl.recommendProductsSectionAdsInfo}>
+                    <p>HUAWEI <span>P55</span> </p><span><ArrowLogo/></span> 
+                    <p>А также стремящиеся вытеснить традиционное производство, технология в целые кластеры себе подобных.</p>
+                    </div>
+                    </Link></div>
+
+
+                </div>
             </div>
          
       </div>
