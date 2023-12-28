@@ -21,6 +21,14 @@ export default function AboutFor() {
             <img className={sty.aboutFor_forst_box} src={`Computer.png`}></img>
             <img className={sty.aboutFor_secand_box} src={`redImg.png`}></img>
           </div>
+          <div className={sty.aboutFor_img}>
+            <img className={sty.aboutFor_forst_box} src={`Computer.png`}></img>
+            <img className={sty.aboutFor_secand_box} src={`redImg.png`}></img>
+          </div>
+          <div className={sty.aboutFor_img}>
+            <img className={sty.aboutFor_forst_box} src={`Computer.png`}></img>
+            <img className={sty.aboutFor_secand_box} src={`redImg.png`}></img>
+          </div>
         </div>
       </div>
     </>
