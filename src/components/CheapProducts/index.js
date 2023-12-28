@@ -21,12 +21,9 @@ export default function CheapProduct() {
         },
       })
       .then((r) => {
-        // console.log(r.data.data, "res");
+        console.log(r.data.data, "Backand");
         setData(r.data.data.product_request);
       });
-  }, []);
-
-  useEffect(() => {
     axios
       .get("https://api.brandstore.uz/api/home", {
         params: {
@@ -37,9 +34,6 @@ export default function CheapProduct() {
         // console.log(r.data.data, "res");
         setFive(r.data.data.product_request);
       });
-  }, []);
-
-  useEffect(() => {
     axios
       .get("https://api.brandstore.uz/api/home", {
         params: {
@@ -86,114 +80,153 @@ export default function CheapProduct() {
               >
                 1 000 000 сум
               </button>
-              <button>asqar</button>
+              <button className={sty.cheapProduct_all_btn}>Смотреть всё</button>
             </div>
           </div>
-          <div className={sty.cheapProduct_tab}>
-            {tab == 1 && (
-              <div className={sty.cheapProduct_container}>
-                {two.length &&
-                  two.map((item) => (
-                    <div className={sty.cheap_img} key={item.id}>
-                      <div className={sty.heapProduc_hard_icon}>
-                        <HardIcon />
-                      </div>
-                      <img
-                        className={sty.cheapProduct_img}
-                        src={item.images[0].url}
-                      />
-                      <p>{item.name}</p>
-                      <div className={sty.cheapProduct_item_price}>
-                        <div>
-                          <span className={sty.span}>
-                            {item.random_shop.monthly_price} so'm / oy
-                          </span>
-                          <p className={sty.cheapProduct_price}>
-                            {item.random_shop.price} So'm
-                          </p>
+          <div className={sty.cheapProduct_api_map_wrap}>
+            <div>
+              <div className={sty.cheapProduct_tab}>
+                {tab == 1 && (
+                  <div className={sty.cheapProduct_container}>
+                    {two.length &&
+                      two.slice(0, 6).map((item) => (
+                        <div
+                          className={sty.cheapProcuct_two_wrap}
+                          key={item.id}
+                        >
+                          <div className={sty.cheap_img}>
+                            <div className={sty.heapProduc_hard_icon}>
+                              <HardIcon />
+                            </div>
+                            <img
+                              className={sty.cheapProduct_img}
+                              src={item.images[0].url}
+                            />
+                            <p className={sty.cheapProduct_item_name}>
+                              {item.random_shop.name}
+                            </p>
+                            <p className={sty.cheapProduct_brand_name}>
+                              {item.name}
+                            </p>
+                            <div className={sty.cheapProduct_item_price}>
+                              <div>
+                                <span className={sty.span}>
+                                  {item.random_shop.monthly_price} so'm / oy
+                                </span>
+                                <p className={sty.cheapProduct_price}>
+                                  {item.random_shop.price} So'm
+                                </p>
+                              </div>
+                              <p className={sty.cheapProduct_thereIs}>
+                                <p className={sty.cheapProduct_thereIs_text}>
+                                  Mavjud:
+                                </p>
+                                {item.random_shop.bs_quant}-dona
+                              </p>
+                              <button>Qo'shish</button>
+                            </div>
+                          </div>
                         </div>
-                        <p className={sty.cheapProduct_thereIs}>
-                          <p className={sty.cheapProduct_thereIs_text}>
-                            Mavjud:
-                          </p>
-                          {item.random_shop.bs_quant}-dona
-                        </p>
-                        <button>Qo'shish</button>
-                      </div>
-                    </div>
-                  ))}
+                      ))}
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-          <div className={sty.cheapProduct_tab}>
-            {tab == 2 && (
-              <div className={sty.cheapProduct_container}>
-                {five.length &&
-                  five.map((item) => (
-                    <div className={sty.cheap_img} key={item.id}>
-                      <div className={sty.heapProduc_hard_icon}>
-                        <HardIcon />
-                      </div>
-                      <img
-                        className={sty.cheapProduct_img}
-                        src={item.images[0].url}
-                      />
-                      <p>{item.name}</p>
-                      <div className={sty.cheapProduct_item_price}>
-                        <div>
-                          <span className={sty.span}>
-                            {item.random_shop.monthly_price} so'm / oy
-                          </span>
-                          <p>{item.random_shop.price} So'm</p>
-                        </div>
-                        <p className={sty.cheapProduct_thereIs}>
-                          <p className={sty.cheapProduct_thereIs_text}>
-                            Mavjud:
-                          </p>
-                          {item.random_shop.bs_quant}-dona
-                        </p>
+              <div className={sty.cheapProduct_tab}>
+                {tab == 2 && (
+                  <div className={sty.cheapProduct_container}>
+                    {five.length &&
+                      five.slice(0, 6).map((item) => (
+                        <div
+                          className={sty.cheapProcuct_two_wrap}
+                          key={item.id}
+                        >
+                          <div className={sty.cheap_img}>
+                            <div className={sty.heapProduc_hard_icon}>
+                              <HardIcon />
+                            </div>
+                            <img
+                              className={sty.cheapProduct_img}
+                              src={item.images[0].url}
+                            />
+                            <p className={sty.cheapProduct_item_name}>
+                              {item.random_shop.name}
+                            </p>
+                            <p className={sty.cheapProduct_brand_name}>
+                              {item.name}
+                            </p>
+                            <div className={sty.cheapProduct_item_price}>
+                              <div>
+                                <span className={sty.span}>
+                                  {item.random_shop.monthly_price} so'm / oy
+                                </span>
+                                <p>{item.random_shop.price} So'm</p>
+                              </div>
+                              <p className={sty.cheapProduct_thereIs}>
+                                <p className={sty.cheapProduct_thereIs_text}>
+                                  Mavjud:
+                                </p>
+                                {item.random_shop.bs_quant}-dona
+                              </p>
 
-                        <button>Qo'shish</button>
-                      </div>
-                    </div>
-                  ))}
-              </div>
-            )}
-          </div>
-          <div className={sty.cheapProduct_tab}>
-            {tab == 3 && (
-              <div className={sty.cheapProduct_container}>
-                {oneMln.length &&
-                  oneMln.map((item) => (
-                    <div className={sty.cheap_img} key={item.id}>
-                      <div className={sty.heapProduc_hard_icon}>
-                        <HardIcon />
-                      </div>
-                      <img
-                        className={sty.cheapProduct_img}
-                        src={item.images[0].url}
-                      />
-                      <p>{item.name}</p>
-                      <div className={sty.cheapProduct_item_price}>
-                        <div>
-                          <span className={sty.span}>
-                            {item.random_shop.monthly_price} so'm / oy
-                          </span>
-                          <p>{item.random_shop.price} So'm</p>
+                              <button>Qo'shish</button>
+                            </div>
+                          </div>
                         </div>
-                        <p className={sty.cheapProduct_thereIs}>
-                          <p className={sty.cheapProduct_thereIs_text}>
-                            Mavjud:
-                          </p>
-                          {item.random_shop.bs_quant}-dona
-                        </p>
-
-                        <button>Qo'shish</button>
-                      </div>
-                    </div>
-                  ))}
+                      ))}
+                  </div>
+                )}
               </div>
-            )}
+              <div className={sty.cheapProduct_tab}>
+                {tab == 3 && (
+                  <div className={sty.cheapProduct_container}>
+                    {oneMln.length &&
+                      oneMln.slice(0, 6).map((item) => (
+                        <div
+                          className={sty.cheapProcuct_two_wrap}
+                          key={item.id}
+                        >
+                          <div className={sty.cheap_img}>
+                            <div className={sty.heapProduc_hard_icon}>
+                              <HardIcon />
+                            </div>
+                            <img
+                              className={sty.cheapProduct_img}
+                              src={item.images[0].url}
+                            />
+
+                            <p className={sty.cheapProduct_item_name}>
+                              {item.random_shop.name}
+                            </p>
+                            <p className={sty.cheapProduct_brand_name}>
+                              {item.name}
+                            </p>
+                            <div className={sty.cheapProduct_item_price}>
+                              <div>
+                                <span className={sty.span}>
+                                  {item.random_shop.monthly_price} so'm / oy
+                                </span>
+                                <p>{item.random_shop.price} So'm</p>
+                              </div>
+                              <p className={sty.cheapProduct_thereIs}>
+                                <p className={sty.cheapProduct_thereIs_text}>
+                                  Mavjud:
+                                </p>
+                                {item.random_shop.bs_quant}-dona
+                              </p>
+
+                              <button>Qo'shish</button>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                )}
+              </div>
+            </div>
+            <div className={sty.cheapProduct_adverd}>
+              <div className={sty.cheapProduct_adverd_forst}></div>
+              <div className={sty.cheapProduct_adverd_secand}></div>
+            </div>
           </div>
         </div>
       </div>

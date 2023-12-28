@@ -1,15 +1,98 @@
-.aboutFor_img {
+.aboutFor_container {
   max-width: 1440px;
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  /* text-align: center; */
 }
 
-.aboutFor_forst_box {
-  width: 300px;
-  position: absolute;
+.aboutFor_img img {
+  position: relative;
+  width: 400px;
+  margin-left: 40px;
 }
 
-.aboutFor_secand_box {
+.aboutFor_center_img img {
+  position: relative;
+  margin-left: 40px;
+
+  width: 400px;
+}
+
+.aboutFor_left_img img {
+  position: relative;
+  margin-left: 40px;
+
+  width: 400px;
+}
+
+.aboutFor_secand_box0 {
   position: absolute;
-  top: 82px;
-  width: 300px;
+  bottom: 44%;
+  margin: 0 auto;
+}
+
+.aboutFor_secand_box1 {
+  position: absolute;
+  bottom: 44%;
+}
+.aboutFor_secand_box2 {
+  position: absolute;
+  bottom: 44%;
+}
+
+.aboutFor_img p {
+  font-family: Montserrat;
+  position: absolute;
+  bottom: 50%;
+  z-index: 1;
+  color: #ffffff;
+}
+
+.aboutFor_center_img p {
+  font-family: Montserrat;
+
+  position: absolute;
+  bottom: 50%;
+  z-index: 1;
+  color: white;
+}
+
+.aboutFor_left_img p {
+  font-family: Montserrat;
+
+  position: absolute;
+  bottom: 50%;
+  z-index: 1;
+  color: white;
+}
+
+.AboutFor_text1 {
+  font-size: 30px;
+  width: 20%;
+  text-align: center;
+  position: absolute;
+  left: 70px;
+}
+
+.AboutFor_text2 {
+  position: absolute;
+  font-size: 30px;
+  width: 20%;
+  text-align: center;
+  left: 38%;
+}
+.AboutFor_text3 {
+  position: absolute;
+  font-size: 30px;
+  width: 15%;
+  text-align: center;
+  left: 70%;
+}
+
+.tecno_img {
+  position: absolute;
+  top: 60%;
+  width: 100%;
 }
