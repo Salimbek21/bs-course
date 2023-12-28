@@ -1,15 +1,14 @@
-* {
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
-.actice {
-  color: red;
-  width: 100px;
-  height: 25px;
-  border: none;
-  background-color: white;
-  font-size: 0.9rem;
-  cursor: pointer;
+.container {
+ max-width: 92%;
+  margin: 0 auto;
+
 }
+

@@ -1,0 +1,278 @@
+.sectionRecommend {
+  background: #f9f9f9;
+}
+
+.recommendationProductsWrapper {
+  width: 100%;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 70% 30%);
+}
+
+.recommendationProducts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  /* gap: 10px; Adjust the gap as needed */
+  /* background-color: aliceblue; */
+}
+
+.recommendationProductsItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(155, 148, 148, 0.66);
+  background: #fff;
+}
+.recommendationProductsItem:hover {
+  border: 1px solid #e30909;
+}
+
+.recommendationProductsItem > a {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  padding: 25px;
+}
+
+.likeLogo {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  top: 23px;
+  right: 23px;
+}
+
+.recommendationProductsImage {
+  width: 100%;
+  /* height: 270px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  margin: auto;
+  padding: 30px 18px 0 18px;
+}
+.recommendationProductsImage > img {
+  width: 100%;
+}
+
+.recommendProductInfo,
+.recommendProductTitle {
+  display: flex;
+  flex-direction: column;
+}
+
+.recommendProductTitle {
+  gap: 10px;
+}
+
+.recommendProductTitle > p:first-child {
+  color: #2f2f2f;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.recommendProductTitle > p:nth-child(2) {
+  color: #000322;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  /* font-weight: 500; */
+  line-height: normal;
+  text-decoration-line: underline;
+  font-weight: 600;
+  /* >>>>>>>>>>>>>>>>>>>> */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.recommendProductQuantity {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+  gap: 6px;
+}
+
+.recommendProductQuantity > p {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+  text-transform: capitalize;
+}
+
+.recommendProductQuantity > p:nth-child(2) {
+  color: #e30909;
+}
+
+.recommendProductPrice {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recommendProductPrice > div > p:first-child {
+  color: #878787;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22.496px; /* 140.598% */
+}
+
+.recommendProductPrice > div > p:nth-child(2) {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px; /* 110% */
+}
+
+.recommendProductPrice > button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 10px;
+  background: #e30909;
+  border: none;
+  gap: 5px;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18.45px; /* 115.312% */
+  z-index: 2;
+  cursor: pointer;
+}
+
+.recommendProductsSectionAds {
+  /* display: flex;
+  flex-direction: column; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  /* border: 1px solid red; */
+}
+
+.recommendProductsSectionAds > div:first-child {
+  background-image: url("../../../public/ad_bg.png"),
+    linear-gradient(180deg, #f21c22 32.18%, #e73c40 100%);
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  background-size: contain;
+}
+.recommendProductsSectionAds > div:last-child {
+  background-image: url("../../../public/ad_huawei_bg.png"),
+    linear-gradient(180deg, #111 17%, #232323 100%);
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  background-size: contain;
+}
+
+.recommendProductsSectionAds > div > a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: end;
+}
+.recommendProductsSectionAdsInfo {
+  width: 80%;
+  margin-bottom: 53.8px;
+  margin-left: 47.5px;
+  gap: 9px;
+}
+
+.recommendProductsSectionAdsInfo > p:first-child {
+  display: inline;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  margin-right: 15px;
+}
+
+.recommendProductsSectionAdsInfo > p:first-child > span:first-child {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+.recommendProductsSectionAdsInfo > p:last-child {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+
+@media screen and (max-width: 1400px) {
+  
+  .recommendationProductsWrapper {
+    margin-top: 50px;
+  }
+  
+  .recommendationProductsItem > a {
+    padding: 20px;
+  }
+  
+  .likeLogo {
+    gap: 10px;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .recommendationProductsImage {
+    width: 100%;
+    /* height: 270px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    margin: auto;
+    padding: 30px 18px 0 18px;
+  }
+  .recommendationProductsImage > img {
+    width: 100%;
+  }
+  
+  .recommendProductInfo,
+  .recommendProductTitle {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .recommendProductTitle {
+    gap: 10px;
+  }
+  
+  .recommendProductTitle > p:first-child {
+    color: #2f2f2f;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+}
