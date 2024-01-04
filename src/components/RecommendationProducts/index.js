@@ -2,13 +2,13 @@ import axios from "axios";
 import cls from "../Brands/brands.module.css";
 import stl from "./RecommendationProducts.module.css";
 import { useEffect, useState } from "react";
-// import {
-//   ReccomendationProductSectionLogo,
-//   LikeLogo,
-//   ChartLogo,
-//   BucketLogo,
-//   ArrowLogo,
-// } from "../svg";
+import {
+  ReccomendationProductSectionLogo,
+  LikeLogo,
+  ChartLogo,
+  BucketLogo,
+  ArrowLogo,
+} from "../svg";
 import Link from "next/link";
 
 export default function RecommendationProducts() {
@@ -34,7 +34,7 @@ export default function RecommendationProducts() {
           <div className={cls.brandAndReccomendNavPart}>
             <div className={cls.sectionName}>
               <div className={cls.yourBrandSectionLogo}>
-                {/* <ReccomendationProductSectionLogo /> */}
+                <ReccomendationProductSectionLogo />
               </div>
 
               <span>
@@ -52,7 +52,7 @@ export default function RecommendationProducts() {
                   <li key={item.id} className={stl.recommendationProductsItem}>
                     <Link href="#">
                       <div className={stl.likeLogo}>
-                        {/* <LikeLogo /> <ChartLogo />{" "} */}
+                        <LikeLogo /> <ChartLogo />
                       </div>
                       <div className={stl.recommendationProductsImage}>
                         <img src={item.images[0].url} alt={item.name} />
@@ -63,8 +63,8 @@ export default function RecommendationProducts() {
                           <p>{item.name}</p>
                         </div>
                         <div className={stl.recommendProductQuantity}>
-                          <p>mavjud:</p>{" "}
-                          <p>{item.random_shop.quantity} dona.</p>
+                          <p>Доступно:</p>
+                          <p>{item.random_shop.quantity} шт.</p>
                         </div>
                         <div className={stl.recommendProductPrice}>
                           <div>
@@ -72,9 +72,9 @@ export default function RecommendationProducts() {
                             <p>{item.random_shop.price} сум</p>
                           </div>
                           <button>
-                            <span>
-                              {/* <BucketLogo /> */}
-                            </span>{" "}
+                            <span hidden='hidden'>
+                              <BucketLogo />
+                            </span>
                             в Корзину
                           </button>
                         </div>
@@ -88,10 +88,10 @@ export default function RecommendationProducts() {
                 <Link href="#">
                   <div className={stl.recommendProductsSectionAdsInfo}>
                     <p>
-                      VIVO <span>X550</span>{" "}
+                      VIVO <span>X550</span>
                     </p>
                     <span>
-                      {/* <ArrowLogo /> */}
+                      <ArrowLogo/>
                     </span>
                     <p>
                       А также стремящиеся вытеснить традиционное производство,
@@ -105,10 +105,10 @@ export default function RecommendationProducts() {
                 <Link href="#">
                   <div className={stl.recommendProductsSectionAdsInfo}>
                     <p>
-                      HUAWEI <span>P55</span>{" "}
+                      HUAWEI <span>P55</span>
                     </p>
                     <span>
-                      {/* <ArrowLogo /> */}
+                      <ArrowLogo />
                     </span>
                     <p>
                       А также стремящиеся вытеснить традиционное производство,
