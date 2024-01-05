@@ -823,3 +823,18 @@
     font-size: 16px;
   }
 }
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 450px) {
+ .recommendationProductsImage>img {
+    width: 215px;
+    min-width: 215px;
+    min-height: 215px;
+  }
+    .recommendationProductsImage {
+    padding: 15px;
+  } 
+}
