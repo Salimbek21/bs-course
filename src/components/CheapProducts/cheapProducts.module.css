@@ -1,0 +1,123 @@
+.percentageLogo {
+  width: 73px;
+  height: 73px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 39.5px;
+  border: 1px solid #000;
+}
+
+.price {
+  display: flex;
+  width: 38%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*   */
+#cheapProduct_tab { 
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-size: 18px;
+  line-height: 29px;
+  background: unset;
+  /* color: #5f5f5f; */
+  font-weight: 500;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  border: none;
+  cursor: pointer;
+}
+
+ .buttonActive{
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-size: 18px;
+  line-height: 29px;
+  background: unset;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  color: #e30909;
+  -webkit-text-decoration-line: unset;
+  text-decoration-line: unset;
+}
+
+.cheapProductsName {
+  height: 48px;
+}
+
+
+
+
+@media screen and (max-width:1150px) {
+  .cheapProductsNavbar {
+    position: relative;
+    display: flex;
+    /* flex-wrap: wrap; */
+    padding-bottom: 6vmax;
+  }
+
+  .price {
+    position: absolute;
+    width: auto;
+    top: 80%;
+    right: 0;
+    order: 3;
+    gap: 45px;
+  }
+}
+
+@media screen and (max-width:780px) {
+  .percentageLogo {
+    width: 65px;
+    height: 65px;
+  }
+
+  .percentageLogo>svg {
+    width: 30px;
+  }
+}
+
+@media screen and (max-width:750px) {
+  .percentageLogo {
+    width: 55px;
+    height: 55px;
+  }
+
+  .percentageLogo>svg {
+    width: 25px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .cheapProductsNavbar {
+    padding-bottom: 9vmax;
+  }
+
+  .percentageLogo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .percentageLogo>svg {
+    width: 15px;
+  }
+
+  .price {
+    gap: 10px ;
+  }
+
+  #cheapProduct_tab {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width:350px) {
+  .cheapProducts{
+    margin-top: 30px;
+  }
+  
+}
