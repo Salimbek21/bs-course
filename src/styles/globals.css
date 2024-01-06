@@ -7,7 +7,15 @@
   font-family: Montserrat;
 }
 
+li {
+  list-style-type: none;
+}
+
 .container {
   max-width: 92%;
   margin: 0 auto;
+}
+
+.actice {
+  color: red;
 }

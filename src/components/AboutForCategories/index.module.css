@@ -1,5 +1,10 @@
+.AboutFor {
+  width: 100%;
+  margin-top: 50px;
+}
+
 .aboutFor_container {
-  max-width: 1440px;
+  width: 90%;
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -91,8 +96,14 @@
   left: 70%;
 }
 
+.tecno_container_img {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .tecno_img {
   position: absolute;
   top: 60%;
   width: 100%;
+  margin: auto;
 }

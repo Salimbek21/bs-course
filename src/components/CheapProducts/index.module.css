@@ -1,60 +1,17 @@
-.cheapProduct_wrapper {
-  max-width: 1440px;
-}
-
-.cheapProduct_all_item {
-  width: 95%;
-  margin: 0 auto;
-}
-
 .cheapProduct_container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border: 2px solid red;
-  margin: 0 auto;
-  /* margin-top: 25px; */
+  width: 100%;
+  /* margin: auto; */
 }
 
-.cheapProcuct_two_wrap {
-  border: 1px solid #44444461;
-}
-
-.cheap_img {
-  /* border: 1px solid #44444461; */
-  text-align: center;
-  position: relative;
-  margin: 20px 20px 20px;
-}
-
-.cheapProduct_img {
-  width: 200px;
+.cheapProduct_tab_wrap {
+  width: 92%;
+  margin: auto;
 }
 
 .cheapProduct_title {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 25px;
-  margin-bottom: 25px;
-
-  /* justify-content: center; */
-}
-
-.cheapProduct_title_item {
-  font-weight: 700;
-  margin-left: 20px;
-  font-size: 20px;
-}
-
-.cheapProduct_title_item p {
-  color: red;
-  font-weight: bold;
-}
-
-.cheapProduct_item_name {
-  text-align: left;
-  opacity: 0.6;
-  font-weight: 600;
 }
 
 .cheapProcuct_round_prt {
@@ -78,7 +35,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 85%;
+  width: 100%;
 }
 
 #cheapProduct_tab {
@@ -89,94 +46,186 @@
   font-weight: bold;
 }
 
-.cheapProduct_item_price {
+.cheapProduct_all_btn {
+  width: 248px;
+  height: 64px;
+  background-color: white;
+  border: 2px solid #444444a0;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.cheapProduct_all_btn p {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+/* ------>next lvl */
+
+.cheapProduct_aip_container {
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.cheapProduct_all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid red;
+  margin: auto;
+  /* width: 90%; */
+}
+
+.cheapProduct_two_wrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cheapProduct_two_container {
+  height: 561px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #444;
+}
+
+.hardIcon_cheapProduct {
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  left: 40%;
+  top: 25px;
+  gap: 10px;
+}
+
+.cheapPraduct_hardIcon_icon:hover {
+  background-color: red;
+}
+
+.cheapPraduct_items {
+  height: 70%;
+}
+
+.cheapProduct_brand_img {
+  width: 234.58px;
+  height: 270px;
+  top: 3426px;
+  left: 157px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.cheapProduct_wrap_brand_list {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.cheapProduct_link {
+  color: black;
+}
+
+.cheapProduct_brand_text_item {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  color: rgba(47, 47, 47, 1);
+}
+
+.cheapProduct_brand_text {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.thereIs_cheapProduct {
+  font-weight: 800;
+  color: red;
+  width: 90%;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.thereIs_cheapProduct span {
+  color: black;
+}
+
+.cheapProduct_price_wrap {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 20px;
-  margin-bottom: 20px;
+
+  /* gap: 98px; */
 }
 
-.cheapProduct_brand_name {
-  /* margin-bottom: 100px; */
+.cheapProduct_monthly_price {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
-.cheapProduct_price {
-  color: red;
+.cheapProduct_brand_prace {
+  font-family: Montserrat;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
-.cheapProduct_item_price button {
-  width: 150px;
-  height: 40px;
-  background-color: red;
+.cheapProduct_add_bnt {
+  width: 148.25px;
+  height: 53px;
+  top: 4404px;
+  left: 742.61px;
+  background: rgba(227, 9, 9, 1);
   color: white;
-  font-weight: bold;
-  font-size: 20px;
   border: none;
-  /* border-radius: 10px; */
   cursor: pointer;
 }
 
-.cheapProduct_item_price span {
-  opacity: 0.5;
-}
-
-.cheapProduct_thereIs_text {
-  font-size: 15px;
-  font-weight: 800;
-}
-
-.cheapProduct_thereIs {
-  color: red;
-}
-
-.heapProduc_hard_icon {
-  position: absolute;
-  left: 90%;
-  top: 15px;
-  cursor: pointer;
-}
-
-.heapProduc_hard_icon:hover {
-  background-color: red;
-}
-
-.cheapProduct_all_btn {
-  width: 200px;
-  height: 50px;
-  background-color: white;
-  border: 1px solid #444444;
+.cheapProduct_add_bnt p {
+  font-family: Montserrat;
+  font-size: 16px;
   font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 
-.cheapProduct_api_map_wrap {
-  display: grid;
-  grid-template-columns: 1fr 230px;
+.cheapProduct_adver {
+  width: 30%;
 }
 
-.cheapProduct_adverd {
-  display: flex;
-  flex-direction: column;
-}
-
-.cheapProduct_adverd_forst {
-  width: 340px;
-  height: 426px;
-  border: 1px solid black;
-  background-image: url("../../../public/vivo.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.cheapProduct_adverd_secand {
-  width: 340px;
-  height: 426px;
-  border: 1px solid black;
+.box1 {
+  height: 561px;
   background-image: url("../../../public/huwavei.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left center;
+}
+
+.box2 {
+  height: 561px;
+  background-image: url("../../../public/vivo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
 }

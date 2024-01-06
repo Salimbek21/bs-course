@@ -1,0 +1,19 @@
+.footer_container {
+  width: 100%;
+  background-color: #444;
+}
+.footer_wrap {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 94%;
+  padding: 25px;
+  margin: auto;
+  gap: 95px;
+}
+
+.footer_about_info {
+  color: aliceblue;
+}
+
+.footer_img {
+}

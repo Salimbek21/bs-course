@@ -34,7 +34,9 @@ export default function AboutFor() {
 
             <img className={sty.aboutFor_secand_box2} src={`redImg.png`}></img>
           </div>
-          <img className={sty.tecno_img} src={`tecno.png`} />
+          <div className={sty.tecno_container_img}>
+            <img className={sty.tecno_img} src={`tecno.png`} />
+          </div>
         </div>
       </div>
     </>
