@@ -16,9 +16,9 @@ export default function Home() {
    
      {/* <HeroComponent/>  */}
      <HotProduct/>
-      {/* <CheapProduct/>
+      <CheapProduct/>
       <Brands/>
-      <RecommendationProducts/> */}
+      <RecommendationProducts/>
 
     </>
   )
